@@ -51,7 +51,7 @@ header {
 
 main {
     padding: 4rem;
-    min-height: calc(100vh-60px);
+    min-height: calc(100vh - 1rem);
 
     .icons {
         margin-top: 1rem;
@@ -157,6 +157,33 @@ main {
     @extend .btn;
     background: lighten($primary-color, 50);
     color: #333;
+}
+
+// contact page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        padding: 1rem 1rem;
+        border: 3px #fff solid;
+        margin-bottom: 2rem;
+        @include easeout;
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+
+            span {
+                color: $primary-color;
+            }
+        }
+    }
 }
 
 #main-footer {
